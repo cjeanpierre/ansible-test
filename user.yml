@@ -1,0 +1,11 @@
+-
+  name: create user
+  hosts: all
+  tasks:
+    - name: Execute script
+      user:
+        name: johnd
+        comment: John Doe
+        group: vagrant
+        append: yes
+      become: yes

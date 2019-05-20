@@ -1,0 +1,11 @@
+-
+  name: condition
+  hosts: all
+  tasks:
+    - name: Execute script
+      shell: cat /etc/resolv.conf
+      register: command_output
+
+    - name: echo something
+      shell: echo "papa"
+      when: command_output.stdout.find('10.0.2.4') == -1

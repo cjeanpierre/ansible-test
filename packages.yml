@@ -1,0 +1,14 @@
+-
+  name: Install required packages
+  hosts: all
+  vars:
+    packages:
+        - httpd
+        - httpd-tools
+
+  tasks:
+    -
+      yum:
+        name: "{{ packages }}"
+        state: present
+      become: true

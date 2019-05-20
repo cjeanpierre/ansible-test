@@ -1,0 +1,6 @@
+-
+  name: Execute script
+  hosts: target1
+  tasks:
+    - name: Execute script
+      script: ./echo.sh
