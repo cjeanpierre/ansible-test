@@ -1,0 +1,14 @@
+-
+  name: Remove packages
+  hosts: all
+  vars:
+    packages:
+        - httpd
+        - httpd-tools
+
+  tasks:
+    -
+      yum:
+        name: "{{ packages }}"
+        state: absent
+      become: true

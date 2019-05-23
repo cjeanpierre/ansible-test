@@ -1,0 +1,9 @@
+-
+  name: add line
+  hosts: all
+  tasks:
+    - name: Update entry into /etc/resolv.conf
+      lineinfile:
+        path: /etc/resolv.conf
+        line: 'mama 10.1.250.10'
+      become: yes

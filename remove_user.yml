@@ -1,0 +1,10 @@
+-
+  name: remove user
+  hosts: all
+  tasks:
+    - name: Execute script
+      user:
+        name: johnd
+        state: absent
+        remove: yes
+      become: yes
